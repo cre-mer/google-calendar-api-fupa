@@ -1,4 +1,4 @@
-# PHP Package Boilerplate / Example Project
+# PHP Package Boilerplate / Fixtures Project
 
 This repository shows a basic setup for a PHP package or application in PHP.
 
@@ -48,7 +48,7 @@ PHP has an in-built server for local development. This can be started by executi
 php -S localhost:8000 -t public
 ```
 
-Then open your browser at `http://localhost:8000/example.php`
+Then open your browser at `http://localhost:8000/Fixtures.php`
 
 You should see the text "Hello Ada Lovelace" on your screen.
 

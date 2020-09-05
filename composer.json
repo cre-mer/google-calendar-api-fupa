@@ -1,19 +1,23 @@
 {
-    "name": "elliotjreed/php-package-boilperplate",
+    "name": "cre-mer/google-calendar-api-fupa",
     "license": "MIT",
     "type": "project",
-    "description": "Example PHP package.",
+    "author": "Jonas Merhej",
+    "description": "Fixtures PHP package.",
     "autoload": {
         "psr-4" : {
-            "Example\\" : "src/Example/"
+            "Fixtures\\" : "src/Fixtures/"
         }
     },
     "autoload-dev": {
         "psr-4" : {
-            "Tests\\Example\\" : "tests/Example/"
+            "Fixtures\\Fixtures\\" : "fixtures/Fixtures/"
         }
     },
     "require-dev": {
         "phpunit/phpunit": "^9.1"
+    },
+    "require": {
+        "google/apiclient": "^2.7"
     }
 }

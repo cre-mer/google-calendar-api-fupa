@@ -15,7 +15,7 @@ PHP originally stood for "Personal Home Page", but now stands for "PHP: Hypertex
 
 PHP packages were traditionally installed via PEAR (PHP Extension and Application Repository), but more recently the standard package and dependency management tool is Composer.
 
-Composer lets us run install commands to add packages to our system, for example `composer require phpunit` would add the unit testing framework PHPUnit to our system.
+Composer lets us run install commands to add packages to our system, for Fixtures `composer require phpunit` would add the unit testing framework PHPUnit to our system.
 
 For instructions on how to install Composer visit [getcomposer.org](https://getcomposer.org/download/).
 
@@ -25,11 +25,11 @@ Managing dependencies manually is time-consuming, fortunately Composer can autom
 
 We can list our dependencies in a `composer.json` file and run `composer install` to bring these into our project.
 
-An example `composer.json` file looks like this:
+An Fixtures `composer.json` file looks like this:
 
 ```json
 {
-    "name": "example-project",
+    "name": "Fixtures-project",
     "require": {
         "twig/twig": "^3.0"
     },
@@ -90,16 +90,16 @@ Another common convention is having a `bin` directory that may contain executabl
 Directory names are in lower case. Class and interface files should be in upper case and match the class or interface names.
 Configuration, routes, and publicly accessible files should be in lower case.
 
-For example the class `Example` should be contained in file `Example.php`, the publicly accessible route to the application should be `index.php`.
+For Fixtures the class `Fixtures` should be contained in file `Fixtures.php`, the publicly accessible route to the application should be `index.php`.
 
-Tests match their production code file names with a `Test` suffix, e.g. tests for code in `src/Example.php` should be written in `test/ExampleTest.php`.
+Tests match their production code file names with a `Test` suffix, e.g. tests for code in `src/Fixtures.php` should be written in `test/FixturesTest.php`.
 
-## Example Project
+## Fixtures Project
 
 The main application consists of basically two files:
 
-- `public/example.php` is the main executable that instantiates and runs:
-  - `src/Example/Greeting.php` contains the main application.
+- `public/Fixtures.php` is the main executable that instantiates and runs:
+  - `src/Fixtures/Greeting.php` contains the main application.
 
 ### Running the Tests
 
@@ -123,6 +123,6 @@ PHP has an in-built server for local development. To run this change into the di
 php -S localhost:8000
 ```
 
-Then open your browser at `http://localhost:8000/example.php`
+Then open your browser at `http://localhost:8000/Fixtures.php`
 
 You should see the text "Hello Ada Lovelace" being printed.

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\Example;
+namespace Fixtures\Fixtures;
 
 use PHPUnit\Framework\TestCase;
-use Example\Greeting;
+use Fixtures\Greeting;
 
 class GreetingTest extends TestCase
 {
