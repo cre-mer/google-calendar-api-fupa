@@ -8,9 +8,9 @@ class Fixtures
 {
     private $name;
 
-    public function __construct(array $ids, array $seasons)
+    public function __construct(string $id, array $seasons)
     {
-        $this->ids = $ids;
+        $this->id = $id;
         $this->seasons = $seasons;
 
         $this->optParams = [
@@ -20,12 +20,8 @@ class Fixtures
     }
 
     public function getFixtures() {
-        foreach ($this->ids as $key => $id) {
-            $results = $this->getService()->events->listEvents("$id@import.calendar.google.com", $this->optParams);
-            $fixtures = $results->getItems();
-
-            $this->updateFixtures($fixtures);
-        }
+        $results = $this->getService()->events->listEvents("$this->id@import.calendar.google.com", $this->optParams);
+        return $results->getItems();
     }
 
     public function getService()
